@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <style>
+    body { margin: 0; }
+    #map { height: 100vh; width: 100%; }
+    .crosshair {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      margin-left: -10px;
+      margin-top: -10px;
+      pointer-events: none;
+      z-index: 9999;
+    }
+    .crosshair::before, .crosshair::after {
+      content: "";
+      position: absolute;
+      background: red;
+    }
+    .crosshair::before {
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      transform: translateY(-50%);
+    }
+    .crosshair::after {
+      top: 0;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      transform: translateX(-50%);
+    }
+    #coordinates {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: black;
+      color: white;
+      padding: 5px 10px;
+      font-size: 14px;
+      font-family: monospace;
+      border-radius: 5px;
+      z-index: 9999;
+    }
+    #back-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #007bff;
+      color: white;
+      padding: 8px 12px;
+      text-decoration: none;
+      font-size: 14px;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+
+<a id="back-button" href="dashboard.php">← Back</a>
+<div id="map"></div>
+<div class="crosshair"></div>
+<div id="coordinates">Lat: 0, Lng: 0</div>
+
+<script>
+  var map = L.map('map').setView([8.3605, 123.8425], 17);
+  
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    attribution: '© Esri, Maxar'
+  }).addTo(map);
+  
+  var house = L.icon({
+    iconUrl: './img/icons/house_9408891.png',
+    iconSize: [40, 40]
+  });
+  
+  var school = L.icon({
+    iconUrl: './img/icons/school.png',
+    iconSize: [40, 40]
+  });
+  
+  L.marker([8.362079, 123.841783], { icon: house }).addTo(map)
+    .bindPopup('Boarding House 1<br>★★★★☆<br><a href="boardinghouseinfo/1house.html" target="_blank">View Details</a>');
+  
+  L.marker([8.359423, 123.843258], { icon: school }).addTo(map)
+    .bindPopup('University of Panaon');
+  </script>
+  
+
+</body>
+</html>
