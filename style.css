@@ -1,0 +1,894 @@
+/* Modern styling with better colors and typography */
+:root {
+  --primary-yellow: #ffd700;
+  --secondary-yellow: #ffed4e;
+  --dark-yellow: #f59e0b;
+  --light-yellow: #fef3c7;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --border-light: #e5e7eb;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+* {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+/* Beautiful yellow header */
+.main-header {
+  background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--secondary-yellow) 100%);
+  color: var(--text-dark);
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-lg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+  transition: margin-left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.main-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23000" opacity="0.05"/><circle cx="75" cy="75" r="1" fill="%23000" opacity="0.05"/><circle cx="50" cy="10" r="0.5" fill="%23000" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.1;
+}
+
+.main-header .container-fluid {
+  position: relative;
+  z-index: 1;
+}
+
+.main-header h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  letter-spacing: -0.025em;
+  word-break: break-word;
+}
+
+.main-header .subtitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0.8;
+  margin-top: 0.5rem;
+}
+
+/* Mobile header responsive */
+@media (max-width: 992px) {
+  .main-header h1 {
+    font-size: 2rem;
+  }
+  
+  .main-header .subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-header {
+    padding: 1.2rem 0 !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .main-header h1 {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-header .subtitle {
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+  }
+}
+
+/* Modern sidebar with better styling */
+.hamburger-menu {
+  position: fixed;
+  top: 70px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--primary-yellow), var(--dark-yellow));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1001;
+  box-shadow: var(--shadow-lg);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.hamburger-menu:hover {
+  transform: scale(1.08);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+}
+
+.hamburger-menu:active {
+  transform: scale(0.95);
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hamburger-icon span {
+  width: 20px;
+  height: 2.5px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile hamburger adjustments */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    top: 65px;
+    left: 12px;
+    width: 48px;
+    height: 48px;
+  }
+  
+  .hamburger-icon span {
+    width: 18px;
+    height: 2px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hamburger-menu {
+    top: 60px;
+    left: 10px;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+  }
+  
+  .hamburger-icon {
+    gap: 3px;
+  }
+  
+  .hamburger-icon span {
+    width: 16px;
+    height: 2px;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100vh;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  box-shadow: var(--shadow-lg);
+  z-index: 1000;
+  transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  border-right: 1px solid var(--border-light);
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+/* Mobile sidebar adjustments */
+@media (max-width: 576px) {
+  .sidebar {
+    width: 240px;
+    left: -240px;
+  }
+  
+  .sidebar.active {
+    left: 0;
+  }
+}
+
+.sidebar-header {
+  padding: 2rem 1.5rem 1.5rem;
+  background: linear-gradient(135deg, var(--primary-yellow), var(--secondary-yellow));
+  color: var(--text-dark);
+  text-align: center;
+  position: relative;
+}
+
+.sidebar-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.1), transparent);
+}
+
+.sidebar-header h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.sidebar-header p {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.sidebar-menu {
+  padding: 1.5rem 0;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+  font-weight: 500;
+}
+
+.sidebar-item:hover {
+  background: var(--light-yellow);
+  border-left-color: var(--primary-yellow);
+  color: var(--text-dark);
+  transform: translateX(4px);
+}
+
+.sidebar-item i {
+  margin-right: 1rem;
+  font-size: 1.125rem;
+  width: 24px;
+  text-align: center;
+  color: var(--dark-yellow);
+}
+
+.logout-btn {
+  width: calc(100% - 3rem);
+  margin: 0 1.5rem;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Modern card styling */
+.card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  background: linear-gradient(135deg, var(--light-yellow), #fef9c3);
+  border-bottom: 1px solid var(--border-light);
+  border-radius: 16px 16px 0 0 !important;
+  padding: 1.5rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Modern button styling */
+.btn {
+  border-radius: 12px;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, var(--primary-yellow), var(--dark-yellow));
+  color: var(--text-dark);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.btn-info {
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+/* Carousel improvements */
+.carousel-item img {
+  border-radius: 16px;
+  height: 450px;
+  object-fit: cover;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 20px;
+}
+
+/* Alert improvements */
+.alert {
+  border: none;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.alert-warning {
+  background: linear-gradient(135deg, var(--light-yellow), #fef9c3);
+  color: var(--text-dark);
+}
+
+/* Modal improvements */
+.modal-content {
+  border: none;
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--border-light);
+  border-radius: 16px 16px 0 0;
+  background: linear-gradient(135deg, var(--light-yellow), #fef9c3);
+}
+.main-content {
+    margin-left: 280px;
+    padding: 0 2rem 2rem;
+    width: calc(100% - 280px);
+    min-height: 100vh;
+    margin-top: 150px;
+    transition: margin-left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Also push the header to the right */
+.main-header {
+    margin-left: 0;
+    width: 100%;
+}
+
+.main-header.sidebar-active {
+    margin-left: 280px;
+    width: calc(100% - 280px);
+}
+
+/* For tablet devices */
+@media (max-width: 992px) {
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 0 1.5rem 1.5rem;
+        margin-top: 120px;
+    }
+    
+    .main-header {
+        margin-left: 0;
+        width: 100%;
+        padding: 1.5rem 0 !important;
+    }
+
+    .main-header.sidebar-active {
+        margin-left: 280px;
+        width: calc(100% - 280px);
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 576px) {
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 0 1rem 1rem;
+        margin-top: 100px;
+    }
+    
+    .main-header {
+        margin-left: 0;
+        width: 100%;
+        padding: 1rem 0 !important;
+    }
+
+    .main-header.sidebar-active {
+        margin-left: 240px;
+        width: calc(100% - 240px);
+    }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Improved thumbnails */
+.img-thumbnail {
+  border: 3px solid var(--primary-yellow);
+  border-radius: 12px;
+  transition: none;
+}
+
+/* 360Â° Panorama Viewer Styles */
+.panorama-viewer-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 2000;
+  display: none;
+}
+
+.panorama-viewer-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.panorama-controls {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2001;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.panorama-controls button {
+  background: rgba(255, 215, 0, 0.9);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #333;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.panorama-controls button:hover {
+  background: rgba(255, 165, 0, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+.panorama-navigation {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2001;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.panorama-nav-btn {
+  background: rgba(255, 215, 0, 0.9);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #333;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.panorama-nav-btn.active {
+  background: #ffa500;
+  color: white;
+  transform: scale(1.1);
+}
+
+.panorama-nav-btn:hover {
+  background: rgba(255, 165, 0, 1);
+  transform: translateY(-2px);
+}
+
+/* Loading indicator for panorama */
+.panorama-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 18px;
+  z-index: 2002;
+}
+
+.panorama-loading i {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Panorama preview thumbnails */
+.panorama-preview {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.panorama-preview:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+}
+
+.panorama-preview::after {
+  content: "360Â°";
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(255, 215, 0, 0.9);
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/* ============================================ */
+/* FIXED ROOM CARDS - Matching Reference Image */
+/* ============================================ */
+
+/* Room Cards Grid Container */
+.rooms-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 30px 0;
+  justify-content: flex-start;
+  padding: 20px 0;
+}
+
+/* Individual Room Card - White background with black border */
+.room-card {
+  background: white;
+  border: 3px solid #000;
+  border-radius: 25px;
+  padding: 35px 45px;
+  min-width: 200px;
+  max-width: 240px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.room-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-color: #fdb813;
+}
+
+/* Room Title - Yellow/Gold color */
+.room-card h3 {
+  color: #fdb813;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+  letter-spacing: -0.5px;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Room ID Display - Below room title */
+.room-id {
+  color: #333;
+  font-size: 15px;
+  margin-bottom: 25px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Manage Button - Yellow gradient matching reference */
+.manage-btn {
+  background: linear-gradient(135deg, #fdb813 0%, #ffa500 100%);
+  color: #000;
+  border: none;
+  padding: 14px 45px;
+  border-radius: 30px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-shadow: 0 3px 8px rgba(253, 184, 19, 0.4);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.manage-btn:hover {
+  background: linear-gradient(135deg, #ffa500 0%, #ff8c00 100%);
+  transform: scale(1.08);
+  box-shadow: 0 5px 15px rgba(253, 184, 19, 0.6);
+}
+
+/* View Pending Tenants Button */
+.btn-pending-tenants {
+  background: white;
+  color: #000;
+  border: 2px solid #000;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-pending-tenants:hover {
+  background: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Add/Remove Room Buttons */
+.btn-add-room,
+.btn-remove-room {
+  background: white;
+  color: #000;
+  border: 2px solid #000;
+  padding: 12px 35px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-add-room:hover {
+  background: #e8f5e9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: #4caf50;
+}
+
+.btn-remove-room:hover {
+  background: #ffebee;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: #f44336;
+}
+
+/* Responsive design for room cards */
+@media (max-width: 992px) {
+  .rooms-grid {
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .room-card {
+    min-width: 180px;
+    max-width: 220px;
+    padding: 30px 40px;
+  }
+
+  .room-card h3 {
+    font-size: 26px;
+  }
+
+  .room-id {
+    font-size: 14px;
+  }
+
+  .manage-btn {
+    padding: 12px 40px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rooms-grid {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .room-card {
+    min-width: 160px;
+    max-width: 200px;
+    padding: 25px 35px;
+  }
+
+  .room-card h3 {
+    font-size: 24px;
+  }
+
+  .room-id {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .manage-btn {
+    padding: 10px 35px;
+    font-size: 15px;
+  }
+
+  .btn-add-room,
+  .btn-remove-room {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .room-card {
+    min-width: 140px;
+    max-width: 180px;
+    padding: 20px 30px;
+  }
+
+  .room-card h3 {
+    font-size: 22px;
+  }
+
+  .room-id {
+    font-size: 12px;
+  }
+
+  .manage-btn {
+    padding: 10px 30px;
+    font-size: 14px;
+  }
+}
+
+/* Additional room card states */
+.room-card.occupied {
+  border-color: #10b981;
+}
+
+.room-card.vacant {
+  border-color: #ef4444;
+}
+
+.room-card.maintenance {
+  border-color: #f59e0b;
+  opacity: 0.7;
+}
+
+/* Button group styling */
+.btn-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 576px) {
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-add-room,
+  .btn-remove-room {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.bed-icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.bed-icon {
+    font-size: 20px;
+}
+.bed-icon.available {
+    color: #27ae60;  /* Green for available beds */
+}
+
+.bed-icon.occupied {
+    color: #e74c3c;  /* Red for occupied beds */
+}
+
+/* Sidebar-specific overrides */
+.sidebar .logout-btn {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0.9rem 1rem !important;
+  border-radius: 10px !important;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12) !important;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 280px;
+  }
+  .sidebar .logout-btn {
+    padding: 0.85rem 1rem !important;
+    font-size: 0.95rem;
+  }
+}

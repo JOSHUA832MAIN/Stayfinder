@@ -1,0 +1,423 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100vh;
+    background: #ffffff; /* change from linear-gradient(135deg, #FFD700, #FFA500) to white */
+    color: #333; /* dark text for visibility on white */
+    transition: left 0.3s;
+    z-index: 1050;
+}
+
+
+    .sidebar.show {
+      left: 0;
+    }
+
+    .main-content {
+      transition: margin-left 0.3s;
+      background: #FFFAF0;
+    }
+
+    .main-content.shifted {
+      margin-left: 280px;
+    }
+
+    .sidebar-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1040;
+      display: none;
+    }
+
+    .sidebar-overlay.show {
+      display: block;
+    }
+
+    .add-card {
+      border: 3px dashed black;
+      border-radius: 15px;
+      min-height: 300px;
+      cursor: pointer;
+      transition: all 0.3s;
+      background: #FFFEF7;
+    }
+
+    .add-card:hover {
+      border-color: #FFA500;
+      background: #FFFBF0;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+    }
+
+    .house-card {
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s;
+      border: 2px solid black;
+      background: #FFFEF7;
+    }
+
+    .house-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+    }
+
+    .upload-area {
+      border: 3px dashed #FFD700;
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-align: center;
+      cursor: pointer;
+      background: #FFFEF7;
+      transition: all 0.3s;
+    }
+
+    .upload-area:hover {
+      border-color: #FFA500;
+      background: #FFFBF0;
+    }
+
+    .upload-area.small {
+      padding: 1rem;
+    }
+
+    .image-preview {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-top: 10px;
+      border: 2px solid #FFD700;
+    }
+
+    /* MULTIPLE PANORAMA UPLOAD STYLES */
+    .panorama-upload-container {
+      border: 3px dashed #FFD700;
+      border-radius: 15px;
+      padding: 2rem;
+      background: #FFFEF7;
+    }
+
+    .panorama-upload-container:hover {
+      border-color: #FFA500;
+      background: #FFFBF0;
+    }
+
+    .panorama-preview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .panorama-preview-item {
+      position: relative;
+      border: 2px solid #FFD700;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .panorama-preview-item img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+
+    .panorama-preview-item .remove-btn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .panorama-counter {
+      background: #FFD700;
+      color: #333;
+      padding: 5px 10px;
+      border-radius: 15px;
+      font-size: 12px;
+      margin-top: 10px;
+      display: inline-block;
+      font-weight: bold;
+    }
+
+    /* 360° PANORAMA VIEWER STYLES */
+    .panorama-viewer-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 2000;
+      display: none;
+    }
+
+    .panorama-viewer-content {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .panorama-controls {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2001;
+      display: flex;
+      gap: 10px;
+    }
+
+    .panorama-controls button {
+      background: rgba(255, 215, 0, 0.9);
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .panorama-navigation {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2001;
+      display: flex;
+      gap: 10px;
+    }
+
+    .panorama-nav-btn {
+      background: rgba(255, 215, 0, 0.9);
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 12px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .panorama-nav-btn.active {
+      background: #FFA500;
+      color: white;
+    }
+
+    /* IMAGE CAROUSEL STYLES */
+    .image-carousel {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      border: 2px solid #FFD700;
+    }
+
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .carousel-slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    .carousel-slide.active {
+      display: block;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .carousel-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 215, 0, 0.8);
+      color: #333;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background 0.3s;
+      font-weight: bold;
+    }
+
+    .carousel-nav:hover {
+      background: rgba(255, 165, 0, 0.9);
+      color: #333;
+    }
+
+    .carousel-prev {
+      left: 10px;
+    }
+
+    .carousel-next {
+      right: 10px;
+    }
+
+    .carousel-indicators {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 5px;
+    }
+
+    .carousel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 215, 0, 0.7);
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .carousel-dot.active {
+      background: #FFA500;
+    }
+
+    .no-images {
+      height: 200px;
+      background: #FFFEF7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      border: 2px solid #FFD700;
+    }
+
+    /* Button Styles */
+    .btn-primary {
+      background: linear-gradient(135deg, #FFD700, #FFA500);
+      border: none;
+      color: #333;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #FFA500, #FF8C00);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+      color: #333;
+    }
+
+    .btn-outline-primary {
+      border-color: #FFD700;
+      color: #FFD700;
+    }
+
+    .btn-outline-primary:hover {
+      background: #FFD700;
+      border-color: #FFD700;
+      color: #333;
+    }
+
+    .btn-outline-light {
+      border-color: #FFD700;
+      color: #333;
+    }
+
+    .btn-outline-light:hover {
+      background: #FFD700;
+      border-color: #FFD700;
+      color: #333;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      background: linear-gradient(135deg, #FFD700, #FFA500) !important;
+      border-bottom: 3px solid #B8860B;
+    }
+
+    .navbar button {
+      border-color: #333;
+      color: #333;
+    }
+
+    .navbar span {
+      color: #333;
+      font-weight: bold;
+    }
+
+    /* Form Styles */
+    .modal-header {
+      background: linear-gradient(135deg, #FFD700, #FFA500) !important;
+      color: #333 !important;
+    }
+
+    .form-control {
+      border: 2px solid #FFD700;
+      border-radius: 8px;
+    }
+
+    .form-control:focus {
+      border-color: #FFA500;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    }
+
+    .badge {
+      background: #FFA500 !important;
+      color: #333 !important;
+    }
+
+    .badge.bg-danger {
+      background: #dc3545 !important;
+      color: white !important;
+    }
+
+    .badge.bg-success {
+      background: #28a745 !important;
+      color: white !important;
+    }
+
+    .text-primary {
+      color: #FF8C00 !important;
+    }
+
+    h1, h2, h3, h4, h5 {
+      color: black !important;
+    }
+
+    @media (max-width: 768px) {
+      .main-content.shifted {
+        margin-left: 0;
+      }
+    }
+    .btn-golden {
+  background-color: #F7D327;
+  border: 1px solid #F7D327;
+  color: #333;
+  font-weight: bold;
+}
+
+.btn-golden:hover {
+  background-color: #E6C000;
+  border-color: #E6C000;
+  color: #333;
+}
+
