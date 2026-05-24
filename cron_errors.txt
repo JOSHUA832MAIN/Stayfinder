@@ -1,0 +1,68 @@
+[FATAL] .env file not found at /home/u325653807/domains/stayfinder.online/public_html/.env at 2025-11-09 22:30:02
+[FATAL] .env file not found at /home/u325653807/domains/stayfinder.online/public_html/.env at 2025-11-09 22:30:23
+[FATAL] .env file not found at /home/u325653807/domains/stayfinder.online/public_html/.env at 2025-11-09 22:30:32
+[FATAL] .env file not found at /home/u325653807/domains/stayfinder.online/public_html/.env at 2025-11-09 22:31:02
+[FATAL] .env file not found at /home/u325653807/domains/stayfinder.online/public_html/.env at 2025-11-09 22:31:04
+[FATAL] .env file not found at /home/u325653807/domains/stayfinder.online/public_html/.env at 2025-11-09 22:32:02
+[FATAL] .env file not found at /home/u325653807/domains/stayfinder.online/public_html/.env at 2025-11-09 22:33:02
+[FATAL] .env file not found at /home/u325653807/domains/stayfinder.online/public_html/.env at 2025-11-09 22:34:02
+[FATAL] .env file not found at /home/u325653807/domains/stayfinder.online/public_html/.env at 2025-11-09 22:35:02
+[FATAL] .env file not found at /home/u325653807/domains/stayfinder.online/public_html/.env at 2025-11-09 22:36:02
+[FATAL] .env file not found at /home/u325653807/domains/stayfinder.online/public_html/.env at 2025-11-09 22:37:02
+[FATAL] .env file not found at /home/u325653807/domains/stayfinder.online/public_html/.env at 2025-11-09 22:38:02
+[ERROR] Owner: metalcoinshop@gmail.com | Tenant: MENDOZA | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:41:18
+[EMAIL FAILED] Could not send email for booking ID 197 at 2025-11-09 22:41:18
+[ERROR] Owner: joshuamendozabadia@gmail.com | Tenant: stayfinder323 | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:41:19
+[EMAIL FAILED] Could not send email for booking ID 221 at 2025-11-09 22:41:19
+[ERROR] Owner: metalcoinshop@gmail.com | Tenant: MENDOZA | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:42:04
+[EMAIL FAILED] Could not send email for booking ID 197 at 2025-11-09 22:42:04
+[ERROR] Owner: joshuamendozabadia@gmail.com | Tenant: stayfinder323 | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:42:06
+[EMAIL FAILED] Could not send email for booking ID 221 at 2025-11-09 22:42:06
+[ERROR] Owner: metalcoinshop@gmail.com | Tenant: MENDOZA | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:43:03
+[EMAIL FAILED] Could not send email for booking ID 197 at 2025-11-09 22:43:03
+[ERROR] Owner: joshuamendozabadia@gmail.com | Tenant: stayfinder323 | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:43:06
+[EMAIL FAILED] Could not send email for booking ID 221 at 2025-11-09 22:43:06
+[ERROR] Owner: metalcoinshop@gmail.com | Tenant: MENDOZA | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:44:03
+[EMAIL FAILED] Could not send email for booking ID 197 at 2025-11-09 22:44:03
+[ERROR] Owner: joshuamendozabadia@gmail.com | Tenant: stayfinder323 | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:44:05
+[EMAIL FAILED] Could not send email for booking ID 221 at 2025-11-09 22:44:05
+[ERROR] Owner: metalcoinshop@gmail.com | Tenant: MENDOZA | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:45:04
+[EMAIL FAILED] Could not send email for booking ID 197 at 2025-11-09 22:45:04
+[ERROR] Owner: joshuamendozabadia@gmail.com | Tenant: stayfinder323 | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:45:06
+[EMAIL FAILED] Could not send email for booking ID 221 at 2025-11-09 22:45:06
+[ERROR] Owner: metalcoinshop@gmail.com | Tenant: MENDOZA | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:46:03
+[EMAIL FAILED] Could not send email for booking ID 197 at 2025-11-09 22:46:03
+[ERROR] Owner: joshuamendozabadia@gmail.com | Tenant: stayfinder323 | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:46:05
+[EMAIL FAILED] Could not send email for booking ID 221 at 2025-11-09 22:46:05
+[ERROR] Owner: metalcoinshop@gmail.com | Tenant: MENDOZA | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:47:04
+[EMAIL FAILED] Could not send email for booking ID 197 at 2025-11-09 22:47:04
+[ERROR] Owner: joshuamendozabadia@gmail.com | Tenant: stayfinder323 | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:47:05
+[EMAIL FAILED] Could not send email for booking ID 221 at 2025-11-09 22:47:05
+[ERROR] Owner: metalcoinshop@gmail.com | Tenant: MENDOZA | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:48:03
+[EMAIL FAILED] Could not send email for booking ID 197 at 2025-11-09 22:48:03
+[ERROR] Owner: joshuamendozabadia@gmail.com | Tenant: stayfinder323 | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:48:05
+[EMAIL FAILED] Could not send email for booking ID 221 at 2025-11-09 22:48:05
+[ERROR] Owner: metalcoinshop@gmail.com | Tenant: MENDOZA | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:49:03
+[EMAIL FAILED] Could not send email for booking ID 197 at 2025-11-09 22:49:03
+[ERROR] Owner: joshuamendozabadia@gmail.com | Tenant: stayfinder323 | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:49:05
+[EMAIL FAILED] Could not send email for booking ID 221 at 2025-11-09 22:49:05
+[ERROR] Owner: metalcoinshop@gmail.com | Tenant: MENDOZA | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:50:05
+[EMAIL FAILED] Could not send email for booking ID 197 at 2025-11-09 22:50:05
+[ERROR] Owner: joshuamendozabadia@gmail.com | Tenant: stayfinder323 | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:50:07
+[EMAIL FAILED] Could not send email for booking ID 221 at 2025-11-09 22:50:07
+[ERROR] Owner: metalcoinshop@gmail.com | Tenant: MENDOZA | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:51:02
+[EMAIL FAILED] Could not send email for booking ID 197 at 2025-11-09 22:51:02
+[ERROR] Owner: metalcoinshop@gmail.com | Tenant: MENDOZA | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:51:03
+[EMAIL FAILED] Could not send email for booking ID 197 at 2025-11-09 22:51:03
+[ERROR] Owner: joshuamendozabadia@gmail.com | Tenant: stayfinder323 | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:51:04
+[EMAIL FAILED] Could not send email for booking ID 221 at 2025-11-09 22:51:04
+[ERROR] Owner: joshuamendozabadia@gmail.com | Tenant: stayfinder323 | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:51:05
+[EMAIL FAILED] Could not send email for booking ID 221 at 2025-11-09 22:51:05
+[ERROR] Owner: metalcoinshop@gmail.com | Tenant: MENDOZA | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:52:03
+[EMAIL FAILED] Could not send email for booking ID 197 at 2025-11-09 22:52:03
+[ERROR] Owner: joshuamendozabadia@gmail.com | Tenant: stayfinder323 | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:52:05
+[EMAIL FAILED] Could not send email for booking ID 221 at 2025-11-09 22:52:05
+[ERROR] Owner: metalcoinshop@gmail.com | Tenant: MENDOZA | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:53:03
+[EMAIL FAILED] Could not send email for booking ID 197 at 2025-11-09 22:53:03
+[ERROR] Owner: joshuamendozabadia@gmail.com | Tenant: stayfinder323 | Error: SMTP Error: Could not authenticate. at 2025-11-09 22:53:05
+[EMAIL FAILED] Could not send email for booking ID 221 at 2025-11-09 22:53:05
